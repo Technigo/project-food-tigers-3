@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breakfast restaurants in Las Vegas</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <img class="logo">
+    <div class="header-text-wrapper">
+      <img class="icon-location">
+      <p class="text-header" id="locationName"></p>
+    </div>
+    <div class="header-text-wrapper">
+      <img class="icon-delivery">
+      <p class="text-header"></p>
+    </div>
+  </header>
+
+  <section class="filter-section">
+    <form>
+
+      <h3 class="filter-title">Choose price range</h3>
+      <div class="filter-checkbox-wrapper">
+        <input
+        type="checkbox"
+        id="priceOneDollar"
+        class="checkbox"
+        value="low-price"
+        >
+        <label for="priceOneDollar">$</label>
+        <input
+          type="checkbox"
+          id="priceTwoDollar"
+          class="checkbox"
+          value="medium-price"
+        >
+        <label for="priceTwoDollar">$$</label>
+        <input
+          type="checkbox"
+          id="priceThreeDollar"
+          class="checkbox"
+          value="high-price"
+        >
+        <label for="priceThreeDollar">$$$</label>
+      </div>
+
+      <h3 class="filter-title">Choose rating</h3>
+      <div class="filter-checkbox-wrapper">
+        <input
+          type="checkbox"
+          id="ratingOne"
+          class="checkbox"
+          value="one"
+        >
+        <label for="ratingOne">1</label>
+        <input
+          type="checkbox"
+          id="ratingOne"
+          class="checkbox"
+          value="one"
+        >
+        <label for="ratingOne">2</label>
+        <input
+          type="checkbox"
+          id="ratingOne"
+          class="checkbox"
+          value="one"
+        >
+        <label for="ratingOne">3</label>
+        <input
+          type="checkbox"
+          id="ratingOne"
+          class="checkbox"
+          value="one"
+        >
+        <label for="ratingOne">4</label>
+        <input
+          type="checkbox"
+          id="ratingOne"
+          class="checkbox"
+          value="one"
+        >
+        <label for="ratingOne">5</label>
+      </div>
+
+      <h3 class="filter-title">How hungry are you?</h3>
+      <input type="range" id="points" name="points" min="0" max="10">
+
+    </form>
+  </section>
+
+  <section class="restaurant-section" id="restaurantSection">
+    <div class="restaurant-wrapper">
+      <img class="restaurant-image" src="#" alt="">
+      <h3 class="restaurant-title"></h3>
+      <div class="restaurant-price-wrapper">
+      <p class="restaurant-text">$</p>
+      <p class="restaurant-text">Breakfast</p>
+      </div>    
+      <div class="restaurant-rating-wrapper">
+        <p class="restaurant-rating">N/A</p>
+        <img class="icon-rating" src="#" alt="">
+      </div>
+    </div>
+
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+</html> 
