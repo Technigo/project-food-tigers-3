@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    <img class="logo" src ="">
+    <img class="logo" src ="./uber-logo.png">
     <div class="header-text-wrapper">
       <img class="icon-location" src="map.png">
       <p class="text-header" id="locationName"></p>
@@ -23,14 +23,16 @@
 
   <section class="filter-section">
 
-    <button id="sortByRating" onclick="sortRating()">
-      Sort on Rating
-    </button>
+    <div class="buttons-wrapper">
+      <button class="sort-button" id="sortByRating" onclick="sortRating()">
+          Sort on Rating
+        </button>
 
-    <button id="sortByCost" onclick="sortCost()">
-      Sort by Cost
-    </button>
-    
+        <button class="sort-button" id="sortByCost" onclick="sortCost()">
+          Sort by Cost
+        </button>
+    </div>
+   
     <form>
 
       <h3 class="filter-title">Choose price range</h3>

@@ -9,8 +9,8 @@ const cityId = 282; // Las Vegas
 const cuisineId = 182; // Breakfast
 
 const url = `https://developers.zomato.com/api/v2.1/search?entity_id=${cityId}&entity_type=city&cuisines=${cuisineId}`;
-const urlSortRating = 'https://developers.zomato.com/api/v2.1/search?entity_id=282&entity_type=city&cuisines=182&sort=rating&order=desc';
-const urlSortCost = 'https://developers.zomato.com/api/v2.1/search?entity_id=282&entity_type=city&cuisines=182&sort=cost&order=asc';
+const urlSortRating = `https://developers.zomato.com/api/v2.1/search?entity_id=${cityId}&entity_type=city&cuisines=${cuisineId}&sort=rating&order=desc`;
+const urlSortCost = `https://developers.zomato.com/api/v2.1/search?entity_id=${cityId}&entity_type=city&cuisines=${cuisineId}&sort=cost&order=asc`;
 
 //FUNCTIONS
 
@@ -23,7 +23,8 @@ const sortRating = () => {
   .then((json) => {
     //city title
     cityLocation.innerHTML = json.restaurants[0].restaurant.location.city;
-
+    restaurantSection.innerHTML = '';
+    console.log(json.restaurants.length);
     json.restaurants.forEach((resto) => {
       console.log(resto);
       restaurantSection.innerHTML += generateHTMLForRestaurants(resto);
@@ -40,7 +41,8 @@ const sortCost = () => {
   .then((json) => {
     //city title
     cityLocation.innerHTML = json.restaurants[0].restaurant.location.city;
-
+    restaurantSection.innerHTML = '';
+    console.log(json.restaurants.length);
     json.restaurants.forEach((resto) => {
       console.log(resto);
       restaurantSection.innerHTML += generateHTMLForRestaurants(resto);
@@ -56,7 +58,8 @@ fetch(url, { headers: { "user-key": apiKey } })
   .then((json) => {
     //city title
     cityLocation.innerHTML = json.restaurants[0].restaurant.location.city;
-
+    restaurantSection.innerHTML = '';
+    console.log(json.restaurants.length);
     json.restaurants.forEach((resto) => {
       console.log(resto);
       restaurantSection.innerHTML += generateHTMLForRestaurants(resto);
