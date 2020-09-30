@@ -1,0 +1,17 @@
+
+.restaurant-image {
+    width: 400px;
+}
+
+.restaurant-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.restaurant-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
