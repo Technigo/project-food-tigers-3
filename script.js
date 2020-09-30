@@ -9,7 +9,46 @@ const cityId = 282; // Las Vegas
 const cuisineId = 182; // Breakfast
 
 const url = `https://developers.zomato.com/api/v2.1/search?entity_id=${cityId}&entity_type=city&cuisines=${cuisineId}`;
+const urlSortRating = 'https://developers.zomato.com/api/v2.1/search?entity_id=282&entity_type=city&cuisines=182&sort=rating&order=desc';
+const urlSortCost = 'https://developers.zomato.com/api/v2.1/search?entity_id=282&entity_type=city&cuisines=182&sort=cost&order=asc';
 
+//FUNCTIONS
+
+// fetch with sort
+const sortRating = () => {
+  fetch(urlSortRating, { headers: { "user-key": apiKey } })
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    //city title
+    cityLocation.innerHTML = json.restaurants[0].restaurant.location.city;
+
+    json.restaurants.forEach((resto) => {
+      console.log(resto);
+      restaurantSection.innerHTML += generateHTMLForRestaurants(resto);
+    });
+  });
+}
+
+//fetch with cost
+const sortCost = () => {
+  fetch(urlSortCost, { headers: { "user-key": apiKey } })
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    //city title
+    cityLocation.innerHTML = json.restaurants[0].restaurant.location.city;
+
+    json.restaurants.forEach((resto) => {
+      console.log(resto);
+      restaurantSection.innerHTML += generateHTMLForRestaurants(resto);
+    });
+  });
+}
+
+// fetch without sort
 fetch(url, { headers: { "user-key": apiKey } })
   .then((response) => {
     return response.json();
@@ -61,7 +100,6 @@ const averageCost = (cost) => {
 }
 
 //create function for image n/a 
-
 const addImage = (image) => {
   if (image === '') {
     return ('./breakfast.jpg');
