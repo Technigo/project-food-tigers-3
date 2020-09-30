@@ -1,17 +1,87 @@
 
-.restaurant-image {
-    width: 400px;
+/* Header */
+
+body {
+  font-family: Roboto, sans-serif;
 }
 
+header {
+  display: flex;
+  background-color: white;
+  border-bottom: solid black 1px;
+  padding: 40px 0px;
+  width: 100%;
+}
+
+.header-text-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.text-header {
+  font-weight: bold;
+  padding-left: 40px;
+}
+
+.icon-location, .icon-delivery { 
+  width: 5%;
+  height: 100%;
+}
+
+/* Filter function */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.filter-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 15px;
+
+}
+
+/* Restaurants */
+
 .restaurant-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .restaurant-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.restaurant-image {
+  width: 400px;
+}
+
+h3 {
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.restaurant-text {
+  padding: 3px;
+  margin: 0px;
+}
+
+.restaurant-rating-wrapper {
+  display:flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.icon-rating {
+  width: 15px;
+  height: 100%;
+  margin: 10px;
 }

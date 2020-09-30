@@ -43,7 +43,7 @@ const generateHTMLForRestaurants = (resto) => {
   restoHTML += `</div>`;
   restoHTML += `<div class="restaurant-rating-wrapper">`;
   restoHTML += `<p class="restaurant-rating">${restoRating}</p>`;
-  restoHTML += `<img class="icon-rating" src="#" alt="">`;
+  restoHTML += `<img class="icon-rating" src="rating-star.png" alt="">`;
   restoHTML += `</div>`;
   restoHTML += `</div>`;
   return restoHTML;
